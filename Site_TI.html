@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Tecnologia da Informação</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            display: flex; /* Adiciona flexbox ao body */
+            flex-direction: column; /* Define a direção do flex como coluna */
+            min-height: 100vh; /* Garante que o body tenha pelo menos a altura da viewport */
+        }
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            background-color: #343a40;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+        nav ul li a:hover {
+            background-color: #495057;
+        }
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex: 1; /* Permite que o main cresça para ocupar o espaço restante */
+        }
+        section {
+            margin-bottom: 40px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+        section h2 {
+            margin-top: 0;
+            font-size: 2em;
+            color: #007BFF;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        /* Estilos específicos da página inicial */
+        #inicio h2 {
+            font-size: 2.5em;
+            color: #007BFF;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        #inicio p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos específicos da seção de serviços */
+        #servicos .servico {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            transition: transform 0.3s ease;
+        }
+        #servicos .servico:hover {
+            transform: translateY(-5px);
+        }
+        #servicos .servico h3 {
+            font-size: 1.5em;
+            color: #007BFF;
+            margin-bottom: 10px;
+        }
+        #servicos .servico p {
+            color: #555;
+        }
+
+        /* Estilos específicos da seção de contato */
+        #contato form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        #contato form label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #444;
+        }
+        #contato form input,
+        #contato form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        #contato form textarea {
+            resize: vertical;
+            height: 150px;
+        }
+        #contato form button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+        #contato form button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilos para tornar o site responsivo */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            main {
+                padding: 15px;
+            }
+            section h2 {
+                font-size: 1.5em;
+            }
+            #contato form {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu Site de Tecnologia da Informação</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="inicio">
+            <h2>Bem-vindo ao meu Site de TI</h2>
+            <p>Olá! Sou Felipe, um profissional de tecnologia da informação apaixonado por tecnologia. Este site foi criado para compartilhar meus conhecimentos, projetos e serviços na área de TI.</p>
+            <p>Aqui você encontrará informações sobre os serviços que ofereço e formas de entrar em contato comigo. Sinta-se à vontade para explorar e conhecer mais sobre o meu trabalho.</p>
+        </section>
+
+        <section id="servicos">
+            <h2>Serviços</h2>
+            <div class="servico">
+                <h3>Desenvolvimento Web</h3>
+                <p>Criação de sites personalizados, responsivos e otimizados para SEO. Desenvolvimento front-end, back-end e full-stack.</p>
+            </div>
+            <div class="servico">
+                <h3>Consultoria em TI</h3>
+                <p>Consultoria especializada em infraestrutura de TI, segurança da informação, gestão de projetos e transformação digital.</p>
+            </div>
+            <div class="servico">
+                <h3>Suporte Técnico</h3>
+                <p>Suporte técnico para hardware, software, redes e sistemas. Soluções para empresas e usuários domésticos.</p>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Entre em contato comigo para solicitar um orçamento, tirar dúvidas ou obter mais informações sobre meus serviços.</p>
+            <form action="#" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="mt-auto">
+        <p>Criador: Felipe Gustavo.</p>
+    </footer>
+
+    <script>
+        // Função para mostrar a seção desejada e esconder as outras
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('main > section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.style.display = 'block';
+            }
+        }
+
+        // Adiciona um evento de clique a cada link do menu para chamar a função showSection
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                showSection(targetId);
+            });
+        });
+
+        // Mostra a seção inicial quando a página carrega
+        showSection('inicio');
+    </script>
+</body>
+</html>
